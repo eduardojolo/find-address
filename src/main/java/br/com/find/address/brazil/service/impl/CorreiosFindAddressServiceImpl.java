@@ -14,6 +14,11 @@ import br.com.find.address.dto.AddressDTO;
 public class CorreiosFindAddressServiceImpl extends AbstractBrazilFindAddressService {
 
 	/**
+	 * Web service name.
+	 */
+	private static final String WEB_SERVICE_NAME = "Correios";
+	
+	/**
 	 * Service URL.
 	 */
 	private static final String SERVICE_URL = "http://correiosapi.apphb.com/cep/";
@@ -26,6 +31,11 @@ public class CorreiosFindAddressServiceImpl extends AbstractBrazilFindAddressSer
 		addressDTO = restTemplate.getForObject(SERVICE_URL + postalCode, CorreiosapiAddressDTO.class);
 
 		return addressDTO;
+	}
+
+	@Override
+	public String getWebServiceName() {
+		return WEB_SERVICE_NAME;
 	}
 
 }

@@ -14,6 +14,11 @@ import br.com.find.address.dto.AddressDTO;
 public class PostmonFindAddressServiceImpl extends AbstractBrazilFindAddressService {
 	
 	/**
+	 * Web service name.
+	 */
+	private static final String WEB_SERVICE_NAME = "Postmon";
+	
+	/**
 	 * Service URL.
 	 */
 	private static final String SERVICE_URL = "http://api.postmon.com.br/v1/cep/";
@@ -28,4 +33,8 @@ public class PostmonFindAddressServiceImpl extends AbstractBrazilFindAddressServ
 		return addressDTO;
 	}
 
+	@Override
+	public String getWebServiceName() {
+		return WEB_SERVICE_NAME;
+	}
 }

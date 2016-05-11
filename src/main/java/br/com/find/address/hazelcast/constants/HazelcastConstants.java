@@ -14,6 +14,11 @@ public final class HazelcastConstants {
 	public static final String LOCAL_INSTANCE_NAME = "local-cache";
 	
 	/**
+	 * General cache map access key name.
+	 */
+	public static final String GENERAL_CACHE_MAP_NAME = "general-map";
+	
+	/**
 	 * Brazil cache map access key name.
 	 */
 	public static final String BRAZIL_CACHE_MAP_NAME = "brazil-map";

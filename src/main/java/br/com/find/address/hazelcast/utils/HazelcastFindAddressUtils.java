@@ -73,6 +73,18 @@ public class HazelcastFindAddressUtils {
 		IMap<String, AddressDTO> map = getCacheIMap(cacheMapName);
 		map.put(postalCode, addressDTO);
 	}
+	
+	/**
+	 * Get the current number of cached elements in the given cache.
+	 * 
+	 * @param cacheMapName Cache map name
+	 * @return Integer
+	 */
+	public Integer getNumberCachedElements(String cacheMapName) {
+		IMap<String, AddressDTO> map = getCacheIMap(cacheMapName);
+		
+		return map.size();
+	}
 
 	/**
 	 * Get the cache map in the hazelcast instance.

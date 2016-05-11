@@ -3,7 +3,7 @@ package br.com.find.address.dto;
 import java.io.Serializable;
 
 /**
- * Erros response DTO for better exception handling.
+ * Error response DTO for better exception handling.
  * 
  * @author Eduardo
  *

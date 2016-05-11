@@ -14,6 +14,11 @@ import br.com.find.address.dto.AddressDTO;
 public class ZippopotamFindAddressServiceImpl extends AbstractCanadaFindAddressService {
 
 	/**
+	 * Web service name.
+	 */
+	private static final String WEB_SERVICE_NAME = "Zippopotam";
+	
+	/**
 	 * Service URL.
 	 */
 	private static final String SERVICE_URL = "http://api.zippopotam.us/CA/";
@@ -28,4 +33,9 @@ public class ZippopotamFindAddressServiceImpl extends AbstractCanadaFindAddressS
 		return addressDTO;
 	}
 
+	@Override
+	public String getWebServiceName() {
+		return WEB_SERVICE_NAME;
+	}
+	
 }

@@ -16,6 +16,11 @@ import br.com.find.address.dto.AddressDTO;
 public class RepublicaVirtualFindAddressServiceImpl extends AbstractBrazilFindAddressService {
 
 	/**
+	 * Web service name.
+	 */
+	private static final String WEB_SERVICE_NAME = "Republica Virtual";
+	
+	/**
 	 * Service URL.
 	 */
 	private static final String SERVICE_URL = "http://cep.republicavirtual.com.br/web_cep.php";
@@ -54,4 +59,9 @@ public class RepublicaVirtualFindAddressServiceImpl extends AbstractBrazilFindAd
 		return addressDTO;
 	}
 
+	@Override
+	public String getWebServiceName() {
+		return WEB_SERVICE_NAME;
+	}
+	
 }

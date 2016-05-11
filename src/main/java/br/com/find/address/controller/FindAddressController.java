@@ -12,6 +12,7 @@ import br.com.find.address.service.IFacadeFindAddress;
 
 /**
  * Find address controller.
+ * Process the requests for addresses by postal code for different countries.
  * 
  * @author Eduardo
  *

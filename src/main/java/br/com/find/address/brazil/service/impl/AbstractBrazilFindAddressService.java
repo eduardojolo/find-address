@@ -12,8 +12,18 @@ import br.com.find.address.service.abs.AbstractFindAddressService;
  */
 public abstract class AbstractBrazilFindAddressService extends AbstractFindAddressService {
 
+	/**
+	 * Postal code necessary for the performance analysis.
+	 */
+	private final static String POSTAL_CODE_PERFORMANCE_ANALYZER = "13098426";
+	
 	@Override
 	public String getCacheMapName() {
 		return HazelcastConstants.BRAZIL_CACHE_MAP_NAME;
+	}
+	
+	@Override
+	public String getPostalCodeForPerformanceAnalyzer() {
+		return POSTAL_CODE_PERFORMANCE_ANALYZER;
 	}
 }

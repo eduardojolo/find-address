@@ -12,9 +12,18 @@ import br.com.find.address.service.abs.AbstractFindAddressService;
  */
 public abstract class AbstractCanadaFindAddressService extends AbstractFindAddressService {
 
+	/**
+	 * Postal code necessary for the performance analysis.
+	 */
+	private final static String POSTAL_CODE_PERFORMANCE_ANALYZER = "A0A";
+	
 	@Override
 	public String getCacheMapName() {
 		return HazelcastConstants.CANADA_CACHE_MAP_NAME;
 	}
 
+	@Override
+	public String getPostalCodeForPerformanceAnalyzer() {
+		return POSTAL_CODE_PERFORMANCE_ANALYZER;
+	}
 }
