@@ -1,6 +1,6 @@
 #find-address#
-    Find-address is a microservice that provides a performatic, robust and resilient way to search for an address given a postal code. It is meant to be a simple way to work with many external providers as it has no database but consumes REST APIs that have the necessary information.
-    It continuously verifies the best REST provider to use based on the availability and response time. It also has an internal cache instance to avoid unnecessary requests and achieve better perfomance.
+  Find-address is a microservice that provides a performatic, robust and resilient way to search for an address given a postal code. It is meant to be a simple way to work with many external providers as it has no database but consumes REST APIs that have the necessary information.
+  It continuously verifies the best REST provider to use based on the availability and response time. It also has an internal cache instance to avoid unnecessary requests and achieve better perfomance.
 
 ---
 
@@ -82,4 +82,4 @@ Extends the `AbstractFindAddressService` providing a new cache map name and post
 + The extension of the new AbstractFindAddressService:
 For each new web service provider add a class that extends the new custom `AbstractFindAddressService`, done in the last step. Those must implement the method `findAddressByPostalCodeIntegration(String postalCode)` calling the provider.
 
-    If everything was done correctly now you should have available a new find-address provider for a new country. It would be automaticaly added to the board and switch between the available providers to achieve the best performance.
+  If everything was done correctly now you should have available a new find-address provider for a new country. It would be automaticaly added to the board and switch between the available providers to achieve the best performance.
